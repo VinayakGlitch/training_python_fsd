@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import register, signup, login, login_user, dashboard
+from .views import register, signup
 from django.http import JsonResponse, HttpResponse
 
 def homePage(request):
@@ -9,13 +9,13 @@ def homePage(request):
 
 
 
+
+
+
 urlpatterns = [
    path('', homePage ),
-   path('signup/',signup), #signup html page
-   path('login/',login), #login hmtl page
-   path('dashboard/',dashboard),
-   path('register/', register ),
-   path('loguser/', login_user )
+   path('signup',signup),
+   path('register/', register )
 
 ]
 
